@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import styles from './style.module.scss';
 import { usePathname } from 'next/navigation';
 import { AnimatePresence } from 'framer-motion';
@@ -19,7 +19,7 @@ export default function index() {
       if(isActive) setIsActive(false)
     }, [pathname])
 
-    useEffect( () => {
+    useLayoutEffect( () => {
         gsap.registerPlugin(ScrollTrigger)
         gsap.to(button.current, {
             scrollTrigger: {

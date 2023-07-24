@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import styles from './style.module.scss'
-import { useRef, useEffect } from 'react';
+import { useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { slideUp } from './animation';
@@ -15,7 +15,7 @@ export default function Home() {
   let xPercent = 0;
   let direction = -1;
 
-  useEffect( () => {
+  useLayoutEffect( () => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(slider.current, {
       scrollTrigger: {
