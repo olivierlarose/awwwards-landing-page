@@ -14,7 +14,7 @@ export default function index() {
                 <p>
                 {
                     phrase.split(" ").map( (word, index) => {
-                        return <span className={styles.mask}><motion.span variants={slideUp} custom={index} animate={isInView ? "open" : "closed"} key={index}>{word}</motion.span></span>
+                        return <span key={index} className={styles.mask}><motion.span variants={slideUp} custom={index} animate={isInView ? "open" : "closed"} key={index}>{word}</motion.span></span>
                     })
                 }
                 </p>
