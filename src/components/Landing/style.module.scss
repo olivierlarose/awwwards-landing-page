@@ -10,7 +10,10 @@
     
     .sliderContainer{
       position: absolute;
-      top: calc(100vh - 350px);
+      top: calc(100vh - 280px);
+      @media (max-width: 768px) {
+        top: calc(100vh - 160px);
+      }
     }
     
     .slider{
@@ -24,6 +27,9 @@
       color: white;
       font-size: 230px;
       font-weight: 500;
+      @media (max-width: 768px) {
+        font-size: 70px;
+      }
       padding-right: 50px;
     }
     
@@ -38,15 +44,26 @@
       top: 35%;
       left: 65%;
       color: white;
-      font-size: 24px;
+      font-size: 32px;
       font-weight: 300;
+      @media (max-width: 768px) {
+        font-size: 24px;
+        top: 50%;
+        left: 20%;      
+        transform: translate(-50%, -50%);
+      }
       p{
         margin: 0px;
         margin-bottom: 10px;
       }
       svg{
-        transform: scale(2);
-        margin-bottom: 100px;
+        transform: scale(3);
+        margin-bottom: 50px;
+        @media (max-width: 768px) {
+          transform: scale(3);
+          margin-top: 12%;
+          margin-bottom: 40px;
+        }
       }
     }
   }

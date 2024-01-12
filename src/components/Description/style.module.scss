@@ -4,11 +4,18 @@
     margin-top: 200px;
     display: flex;
     justify-content: center;
+    @media (max-width: 768px){
+        padding-left: 40px;
+        padding-right: 40px;
+    }
     .body{
         max-width: 1400px;
         display: flex;
         gap: 50px;
         position: relative;
+        @media (max-width: 768px){
+        flex-direction: column;
+        }
         p{
             margin: 0px;
             &:nth-of-type(1){
@@ -19,6 +26,7 @@
                     margin-right: 3px;
                 }
                 .mask{
+                    text-justify: auto ;
                     position: relative;
                     overflow: hidden;
                     display: inline-flex;
@@ -26,7 +34,7 @@
             }
             &:nth-of-type(2){
                 font-size: 18px;
-                width: 80%;
+                width: 100%;
                 font-weight: 300;
             }
         }
