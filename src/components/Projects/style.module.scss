@@ -5,7 +5,10 @@
     padding-right: 200px;
     flex-direction: column;
     margin-top: 300px;
-
+    @media (max-width: 768px) {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
     .body{
         max-width: 1400px;
         width: 100%;
