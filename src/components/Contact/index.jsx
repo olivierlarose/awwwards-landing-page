@@ -26,9 +26,11 @@ export default function index() {
                             src={`/images/background.jpg`}
                             />
                         </div>
+                    <div>
                         <h2>Let's work</h2>
+                        <h2>together</h2>
+                    </div>
                     </span>
-                    <h2>together</h2>
                     <motion.div style={{x}} className={styles.buttonContainer}>
                         <Rounded  backgroundColor={"#334BD3"} className={styles.button}>
                             <p>Get in touch</p>
@@ -46,6 +48,8 @@ export default function index() {
                             <p>+31 6 27 84 74 30</p>
                         </Rounded>
                 </div>
+            </div>
+            <div className={styles.body}>
                 <div className={styles.info}>
                     <div>
                         <span>
