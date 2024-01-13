@@ -9,7 +9,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Rounded from "../../common/RoundedButton";
 import Magnetic from "../../common/Magnetic";
 import Marquee from "react-fast-marquee";
-import Link from "next/link";
 
 export default function Index() {
   const header = useRef(null);
@@ -65,30 +64,24 @@ export default function Index() {
           </svg>
         </div>
         <div className={styles.nav}>
-        <Link href="#work" >
           <Magnetic>
             <div className={styles.el}>
-              <a>Work</a>
+              <a href="#work">Work</a>
               <div className={styles.indicator}></div>
             </div>
           </Magnetic>
-          </Link>
-          <Link href="#about" >
           <Magnetic>
             <div className={styles.el}>
-              <a>About</a>
+              <a href="#about">About</a>
               <div className={styles.indicator}></div>
             </div>
           </Magnetic>
-          </Link>
-          <Link href="#contact" >
             <Magnetic>
               <div className={styles.el}>
-                <a>Contact</a>
+                <a href="#contact">Contact</a>
                 <div className={styles.indicator}></div>
               </div>
             </Magnetic>
-          </Link>
         </div>
         <div className={styles.marq}></div>
       </div>
