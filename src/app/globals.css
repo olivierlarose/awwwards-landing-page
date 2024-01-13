@@ -1,6 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-body{
+
+html {
+    --scroll-behavior: smooth !important;
+    scroll-behavior: smooth !important;
+}
+
+body {
     margin: 0px;
-    overflow: hidden; /* Hide scrollbars */
+    overflow: hidden;
+    /* Hide scrollbars */
     cursor: wait;
+    scroll-behavior: smooth;
 }

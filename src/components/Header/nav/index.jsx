@@ -9,24 +9,20 @@ import Footer from './Footer';
 
 const navItems = [
   {
-    title: "Home",
-    href: "/",
-  },
-  {
     title: "Work",
-    href: "/work",
+    href: "#work",
   },
   {
     title: "About",
-    href: "/about",
+    href: "#about",
   },
   {
     title: "Contact",
-    href: "/contact",
+    href: "#contact",
   },
 ]
 
-export default function index() {
+export default function Index() {
 
   const pathname = usePathname();
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);

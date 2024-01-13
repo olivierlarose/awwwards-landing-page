@@ -9,23 +9,28 @@ import Rounded from '../../common/RoundedButton';
 
 const projects = [
   {
-    title: "C2 Montreal",
-    src: "c2montreal.png",
+    title: "Lamento",
+    src: "https://res.cloudinary.com/davkfrmah/image/upload/v1702915379/Akilesh/lamento%20landing.png",
     color: "#000000"
   },
   {
-    title: "Office Studio",
-    src: "officestudio.png",
+    title: "Livestorm",
+    src: "https://res.cloudinary.com/davkfrmah/image/upload/v1702914394/Akilesh/livestorm.png",
     color: "#8C8C8C"
   },
   {
-    title: "Locomotive",
-    src: "locomotive.png",
+    title: "Filmingo",
+    src: "https://res.cloudinary.com/davkfrmah/image/upload/v1686146984/Filmingo/temp_film_bvuced.jpg",
     color: "#EFE8D3"
   },
   {
-    title: "Silencio",
-    src: "silencio.png",
+    title: "GreenScore ",
+    src: "https://res.cloudinary.com/davkfrmah/image/upload/c_scale,q_75,w_659/v1693820228/Akilesh/2050%20Technologies.jpg",
+    color: "#706D63"
+  },
+  {
+    title: "Thegym",
+    src: "https://res.cloudinary.com/davkfrmah/image/upload/v1693840960/Akilesh/the%20boss%20gym.jpg",
     color: "#706D63"
   }
 ]
@@ -77,7 +82,7 @@ export default function Home() {
   }
 
   return (
-  <main onMouseMove={(e) => {moveItems(e.clientX, e.clientY)}} className={styles.projects}>
+  <main onMouseMove={(e) => {moveItems(e.clientX, e.clientY)}} className={styles.projects} id='work'>
     <div className={styles.body}>
       {
         projects.map( (project, index) => {
@@ -96,7 +101,7 @@ export default function Home() {
                 const { src, color } = project
                 return <div className={styles.modal} style={{backgroundColor: color}} key={`modal_${index}`}>
                     <Image 
-                    src={`/images/${src}`}
+                    src={`${src}`}
                     width={300}
                     height={0}
                     alt="image"
