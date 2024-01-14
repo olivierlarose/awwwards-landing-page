@@ -79,7 +79,7 @@ export default function Index() {
           </Rounded>
         </div>
       </div>
-      <div className={styles.body} id="contact">
+      <div className={styles.body} id="contact-me">
         <div className={styles.info}>
           <div>
             <span>
