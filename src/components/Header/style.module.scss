@@ -78,6 +78,7 @@
         font-weight: 500;
         padding: 35px;
         .el{
+            color: white;
             display: flex;
             flex-direction: column;
             position: relative;
@@ -103,6 +104,9 @@
         }
         a{
             cursor: pointer;
+            text-decoration: none;
+            color: white;
+
         }
     } 
 }

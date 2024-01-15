@@ -3,15 +3,21 @@
 @tailwind utilities;
 
 
-html {
+/* html {
     --scroll-behavior: smooth !important;
     scroll-behavior: smooth !important;
+} */
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
+
 
 body {
     margin: 0px;
     overflow: hidden;
     /* Hide scrollbars */
-    cursor: wait;
-    scroll-behavior: smooth;
+    /* cursor: wait;
+    scroll-behavior: smooth; */
 }
