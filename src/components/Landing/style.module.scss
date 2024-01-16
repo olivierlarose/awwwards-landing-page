@@ -19,7 +19,9 @@
       order: 2;
       flex: 1;
       width: 100%;
-
+      @media (max-width: 768px) {        
+        pointer-events: none;
+      }
       height: 100%;
     }
     
