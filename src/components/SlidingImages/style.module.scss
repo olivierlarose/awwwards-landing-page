@@ -4,10 +4,12 @@
     gap: 3vw;
     position: relative;
     margin-top: 200px;
+    margin-top: 50px;
+
     background-color: white;
     z-index: 1;
     @media (max-width: 768px) {
-        padding-top: 100px;
+        padding-top: 150px;
         gap: 15vw;
         margin-top: 0px;
 

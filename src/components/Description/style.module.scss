@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     @media (max-width: 768px){
+        margin-top: 60px;
         padding-left: 40px;
         padding-right: 40px;
     }
