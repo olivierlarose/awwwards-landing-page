@@ -18,7 +18,7 @@ export default function Index() {
 
   useEffect(() => {
     if (isActive) setIsActive(false);
-  }, [isActive, pathname]);
+  }, [pathname]);
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -44,6 +44,11 @@ export default function Index() {
       },
     });
   }, []);
+
+  const handleNavClick = (value) => {
+      
+    setIsActive(value); // This will log 'false' when the nav element in ChildComponent is clicked
+  };
 
   return (
     <>
@@ -103,7 +108,7 @@ export default function Index() {
           ></div>
         </Rounded>
       </div>
-      <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
+      <AnimatePresence mode="wait">{isActive && <Nav onNavClick={handleNavClick} />}</AnimatePresence>
     </>
   );
 }
