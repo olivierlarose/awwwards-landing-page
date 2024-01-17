@@ -6,6 +6,7 @@ import { useScroll, motion, useTransform, useSpring } from "framer-motion";
 import Magnetic from "../../common/Magnetic";
 import { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
+import Script from "next/script";
 
 export default function Index() {
   const container = useRef(null);
@@ -30,11 +31,16 @@ export default function Index() {
   const rotate = useTransform(scrollYProgress, [0, 1], [120, 90]);
   return (
     <motion.div style={{ y }} ref={container} className={styles.contact}>
+      <Script
+        async
+        src="//embed.typeform.com/next/embed.js"
+        strategy="afterInteractive"
+      ></Script>
       <div className={styles.body}>
         <div className={styles.title}>
           <span>
             <div className={styles.imageContainer}>
-              <Image fill={true} alt={"image"} src={`/images/background.png`} />
+              <Image fill={true} alt={"image"} src={`/images/van.png`} />
             </div>
             <div>
               <h2>Let&apos;s work</h2>
@@ -42,19 +48,18 @@ export default function Index() {
             </div>
           </span>
           <motion.div style={{ x }} className={styles.buttonContainer}>
-            <Rounded
-              data-cal-config='{"layout":"month_view"}'
-              data-cal-link="akilesh-io/conversation"
-              backgroundColor={"#334BD3"}
-              className={styles.button}
+            <button
+              id="feedback-button"
+              data-tf-popup="IIAAy5c2"
+              data-tf-opacity="100"
+              data-tf-iframe-props="title=Client Details and Project Requirements Form"
+              data-tf-transitive-search-params
+              data-tf-medium="snippet"
             >
-              <p
-                data-cal-config='{"layout":"month_view"}'
-                data-cal-link="akilesh-io/conversation"
-              >
-                Get in touch
-              </p>
-            </Rounded>
+              <Rounded className={styles.button}>
+                <p>Get in touch</p>
+              </Rounded>
+            </button>
           </motion.div>
           <motion.svg
             style={{ rotate, scale: 2 }}
@@ -72,11 +77,21 @@ export default function Index() {
         </div>
         <div className={styles.nav}>
           <Rounded>
-            <p>hello@akictech.in</p>
+            <a href="mailto:hello@akictech.in">hello@akictech.in</a>
           </Rounded>
-          <Rounded>
-            <p>+91 73730 14114</p>
-          </Rounded>
+          <button
+            data-cal-config='{"layout":"month_view"}'
+            data-cal-link="akilesh-io/conversation"
+          >
+            <Rounded>
+              <p
+                data-cal-config='{"layout":"month_view"}'
+                data-cal-link="akilesh-io/conversation"
+              >
+                +91 73730 14114
+              </p>
+            </Rounded>
+          </button>
         </div>
       </div>
       <div className={styles.body} id="contact-me">
@@ -91,17 +106,25 @@ export default function Index() {
             <span>
               <h3>socials</h3>
               <Magnetic>
-                <p>Blog</p>
+                <a href="https://app.lamento.in" target="_blank">
+                  <p>Blog</p>
+                </a>
               </Magnetic>
             </span>
             <Magnetic>
-              <p>Instagram</p>
+              <a href="https://www.instagram.com/akilesh_io" target="_blank">
+                <p>Instagram</p>
+              </a>
             </Magnetic>
             <Magnetic>
-              <p>Dribbble</p>
+              <a href="https://dribbble.com/Akilesh_io" target="_blank">
+                <p>Dribbble</p>
+              </a>
             </Magnetic>
             <Magnetic>
-              <p>Twitter</p>
+              <a href="https://twitter.com/akilesh_io" target="_blank">
+                <p>Twitter</p>
+              </a>
             </Magnetic>
           </div>
         </div>
