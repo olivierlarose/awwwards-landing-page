@@ -6,42 +6,42 @@ import Image from 'next/image';
 const slider1 = [
     {
         color: "#e3e5e7",
-        src: "c2.jpg"
+        src: "https://res.cloudinary.com/davkfrmah/image/upload/v1702915379/Akilesh/lamento%20landing.png"
     },
     {
         color: "#d6d7dc",
-        src: "decimal.jpg"
+        src: "https://res.cloudinary.com/davkfrmah/image/upload/v1702914394/Akilesh/livestorm.png"
     },
     {
         color: "#e3e3e3",
-        src: "funny.jpg"
+        src: "https://res.cloudinary.com/davkfrmah/image/upload/v1686146984/Filmingo/temp_film_bvuced.jpg"
     },
     {
         color: "#21242b",
-        src: "google.jpg"
+        src: "https://res.cloudinary.com/davkfrmah/image/upload/c_scale,q_75,w_659/v1693820228/Akilesh/2050%20Technologies.jpg"
     }
 ]
 
 const slider2 = [
     {
-        color: "#d4e3ec",
-        src: "maven.jpg"
+        color: "#d7d4cf",
+        src: "https://res.cloudinary.com/davkfrmah/image/upload/v1686146984/Filmingo/temp_film_bvuced.jpg"
     },
     {
         color: "#e5e0e1",
-        src: "panda.jpg"
+        src: "https://res.cloudinary.com/davkfrmah/image/upload/c_scale,q_75,w_659/v1693820228/Akilesh/2050%20Technologies.jpg"
     },
     {
-        color: "#d7d4cf",
-        src: "powell.jpg"
+        color: "#d4e3ec",
+        src: "https://res.cloudinary.com/davkfrmah/image/upload/v1693840960/Akilesh/the%20boss%20gym.jpg"
     },
     {
         color: "#e1dad6",
-        src: "wix.jpg"
+        src: "https://res.cloudinary.com/davkfrmah/image/upload/v1702914394/Akilesh/livestorm.png"
     }
 ]
 
-export default function index() {
+export default function Index() {
 
     const container = useRef(null);
     const { scrollYProgress } = useScroll({
@@ -63,7 +63,7 @@ export default function index() {
                                     <Image 
                                     fill={true}
                                     alt={"image"}
-                                    src={`/images/${project.src}`}/>
+                                    src={`${project.src}`}/>
                                 </div>
                             </div>
                         })
@@ -77,7 +77,7 @@ export default function index() {
                                     <Image 
                                     fill={true}
                                     alt={"image"}
-                                    src={`/images/${project.src}`}/>
+                                    src={`${project.src}`}/>
                                 </div>
                             </div>
                         })

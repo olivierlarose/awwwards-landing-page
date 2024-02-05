@@ -4,16 +4,33 @@
     z-index: 1;
     top: 0;
     color: white;
-    padding: 35px;
+//    padding: 35px;
     justify-content: space-between;
     width: 100%;
     font-weight: 300;
     box-sizing: border-box;
     align-items: center;
-    
-    .logo{
+    .marq{
+        position: absolute;
         display: flex;
-        cursor: pointer;
+        z-index: 1;
+        bottom: 0;
+        color: black;
+        background-color: aliceblue;
+        justify-content: space-between;
+        width: 100%;
+        font-weight: 300;
+        box-sizing: border-box;
+        align-items: center;
+    }
+    .logo{
+        padding: 35px;
+        display: flex;
+        cursor: pointer;        
+        @media (max-width: 400px) {
+            padding: 0px;
+            padding-left: 20px;
+        }
         p{
             margin: 0px;
             transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
@@ -59,8 +76,10 @@
     .nav{
         display: flex;
         align-items: center;
-
+        font-weight: 500;
+        padding: 35px;
         .el{
+            color: white;
             display: flex;
             flex-direction: column;
             position: relative;
@@ -86,6 +105,9 @@
         }
         a{
             cursor: pointer;
+            text-decoration: none;
+            color: white;
+
         }
     } 
 }

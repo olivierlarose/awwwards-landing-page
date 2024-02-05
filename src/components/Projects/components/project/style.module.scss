@@ -7,7 +7,10 @@
     border-top: 1px solid rgb(201, 201, 201);
     cursor: pointer;
     transition: all 0.2s;
-
+    flex-direction: column-reverse;
+    @media (max-width: 768px) {
+        flex-direction: column-reverse;
+    }
     h2{
         font-size: 60px;
         margin: 0px;

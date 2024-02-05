@@ -9,24 +9,20 @@ import Footer from './Footer';
 
 const navItems = [
   {
-    title: "Home",
-    href: "/",
-  },
-  {
     title: "Work",
-    href: "/work",
+    href: "#work",
   },
   {
     title: "About",
-    href: "/about",
+    href: "#about",
   },
   {
     title: "Contact",
-    href: "/contact",
+    href: "#contact-me",
   },
 ]
 
-export default function index() {
+export default function Index({ onNavClick }) {
 
   const pathname = usePathname();
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);
@@ -40,7 +36,11 @@ export default function index() {
       className={styles.menu}
       >
        <div className={styles.body}>
-            <div onMouseLeave={() => {setSelectedIndicator(pathname)}} className={styles.nav}>
+            <div onMouseLeave={() => {setSelectedIndicator(pathname)}} 
+            onClick={() => { 
+              onNavClick(false);               
+            }} 
+            className={styles.nav}>
                     <div className={styles.header}>
                         <p>Navigation</p>
                     </div>

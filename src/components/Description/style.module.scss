@@ -4,11 +4,19 @@
     margin-top: 200px;
     display: flex;
     justify-content: center;
+    @media (max-width: 768px){
+        margin-top: 60px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
     .body{
         max-width: 1400px;
         display: flex;
         gap: 50px;
         position: relative;
+        @media (max-width: 768px){
+        flex-direction: column;
+        }
         p{
             margin: 0px;
             &:nth-of-type(1){
@@ -19,6 +27,7 @@
                     margin-right: 3px;
                 }
                 .mask{
+                    text-justify: auto ;
                     position: relative;
                     overflow: hidden;
                     display: inline-flex;
@@ -26,13 +35,13 @@
             }
             &:nth-of-type(2){
                 font-size: 18px;
-                width: 80%;
+                width: 100%;
                 font-weight: 300;
             }
         }
         .button{
-            top: 80%;
-            left: calc(100% - 200px); 
+            top: 100%;
+            left: calc(100% - 500px); 
             width: 180px;
             height: 180px;
             background-color: #1C1D20;
@@ -43,6 +52,14 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
+            @media (max-width: 768px){
+                top: 90%;
+                left: calc(100% - 200px); 
+            }
+            @media (max-width: 390px){    
+                top: -180%;            
+                left: calc(100% - 200px); 
+            }
             p{
                 margin: 0px;
                 font-size: 16px;
