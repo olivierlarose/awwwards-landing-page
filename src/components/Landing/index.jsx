@@ -63,6 +63,13 @@ export default function Home() {
         <p>Freelance</p>
         <p>Designer & Developer</p>
       </div>
+
+            <div className={styles.globeContainerWrap}>
+              <p>Located <br />in the <br />India</p>
+              <div className={styles.globeContainer}>
+                <img src="/images/final-globe.gif" alt="Rotating Globe" className={styles.globe} />
+              </div>
+            </div>
     </motion.main>
   )
 }
