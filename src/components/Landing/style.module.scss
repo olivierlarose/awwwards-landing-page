@@ -49,5 +49,45 @@
         margin-bottom: 100px;
       }
     }
+    .globeContainerWrap {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      background-color: #1C1D20;
+      border-radius: 70px;
+      padding: 5px 30px;
+      color: white;
+      font-size: 20px;
+      margin-top: 21rem;
+      left: -3.7rem;
+    }
+    
+    .globeContainerWrap p {
+      margin-left: 60px;
+    }
+    
+    .globeContainer {
+      width: 75px;
+      height: 75px;
+      margin-left: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #999D9E;
+      border-radius: 50%;
+    }
+    
+    .globe {
+      width: 70%;
+      height: 70%;
+      border-radius: 60%;
+      animation: rotate 10s linear infinite;
+    }
+    
+    @keyframes rotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
   }
   
