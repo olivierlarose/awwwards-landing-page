@@ -4,14 +4,25 @@
     gap: 3vw;
     position: relative;
     margin-top: 200px;
+    margin-top: 50px;
+
     background-color: white;
     z-index: 1;
+    @media (max-width: 768px) {
+        padding-top: 150px;
+        gap: 15vw;
+        margin-top: 0px;
+
+    }
     .slider{
         display: flex;
         position: relative;
         gap: 3vw;
         width: 120vw;
         left: -10vw;
+        @media (max-width: 768px) {
+            width: 220vw;
+        }
         .project{
             width: 25%;
             height: 20vw;
@@ -22,6 +33,9 @@
                 position: relative;
                 width: 80%;
                 height: 80%;
+                @media (max-width: 768px) {
+                    height: 130%;
+                }
                 img{
                     object-fit: cover;
                 }
